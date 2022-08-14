@@ -1,16 +1,17 @@
 # MSI-B460M-WIFI-10600-6600XT
 
-hackintosh: OpenCore + MSI B460M Mortar + i5 10600 + 6600XT
+hackintosh: OpenCore + MSI B460M Mortar + i5 10600 + 6600XT+BCM94352Z
 
 UPDATE:
 
-- 2022-06-10：准备安装 macOS 12.4 & OpenCore 0.8.1
+- 2022-08-10：准备安装 macOS 12.5 & OpenCore 0.8.0
+- 2022-08-14：已成功安装 macOS 12.5 & OpenCore 0.8.0
 
 ## 硬件配置
 
 | 配置        | 型号                           | 价格 | 渠道       |
 | ----------- | ------------------------------ | ---- | ---------- |
-| CPU         | Intel i5 10500                 | 1075 | 淘宝: 散片 |
+| CPU         | Intel i5 10600                 | 1075 | 淘宝: 散片 |
 | 主板        | 微星 MSI MAG B460M MORTAR WiFi | 400  | 闲鱼       |
 | 显卡        | 华硕  RX 6600XT 8G DUAL 雪豹   | 1800 | 闲鱼       |
 | 内存        | 光威 普条 DDR4 2666MHz 8G * 2  | 300  | 京东自营   |
@@ -107,7 +108,6 @@ UPDATE:
 | OC/Kexts/VirtualSMC.kext          | 基础驱动，必须                                                                                                                                                                          |
 | OC/Kexts/WhateverGreen.kext       | 显卡相关必须驱动                                                                                                                                                                        |
 | OC/Kexts/XHCI-unsupported.kext    | 配合解决 USB 问题的驱动                                                                                                                                                                 |
-| OC/Kexts/dAGPM.kext               | 配合上面 RX 5500XT 显卡性能提升的驱动                                                                                                                                                   |
 | OC/OpenCore.efi                   | 自带，不动它                                                                                                                                                                            |
 | OC/Tools/OpenShell.efi            | Tools 里面其实都删差不多了                                                                                                                                                              |
 | OC/config.plist                   | **重点编辑文件**                                                                                                                                                                  |
@@ -195,7 +195,7 @@ USB Map 这个，有点麻烦，建议看看司波图的视频，说实话，我
 + [X] 独显免驱
 + [X] 板载声卡
 + [X] 板载网卡（需要手动设置）
-+ [X] Airdrop（需要苹果网卡）
++ [X] Airdrop（更换BCM94352Z）
 
 主要参考链接：
 
